@@ -5,8 +5,12 @@ name = "pypi"
 
 [packages]
 flask = "*"
+flask-cors = "*"
 
 [dev-packages]
 
 [requires]
 python_version = "3.9"
+
+[scripts]
+dev = "bash -c \"export FLASK_ENV='development' && flask run\""
