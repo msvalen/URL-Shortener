@@ -1,0 +1,13 @@
+version: '3'
+services:
+  db:
+    image: postgres:latest
+    volumes:
+      - 'postgresdata:/var/lib/postgresql/data'
+      - './db:/docker-entrypoint-initdb.d/:ro'
+    environment:
+      - POSTGRES_PASSWORD=secretpassword2
+      - POSTGRES_USER=debmon
+      - POSTGRES_DB=shortererl
+volumes:
+  postgresdata:
