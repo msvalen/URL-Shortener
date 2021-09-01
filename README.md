@@ -10,8 +10,7 @@ A free, URL shortener service, where you can enter a URL and get a shortened ver
 * Run `pipenv install` to install dependencies
 
 ## Usage
-* Run `docker-compose up`
-* In a diferent terminal run `pipenv run dev` or `python app.py` to launch
+* Run `pipenv run dev` or `python app.py` to launch
 * Run docker-compose up to run server
 * Go to `localhost:5000` to view  
 * enter url you want to shorten
