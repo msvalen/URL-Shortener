@@ -10,8 +10,7 @@ A free, URL shortener service, where you can enter a URL and get a shortened ver
 * Run `pipenv install` to install dependencies
 
 ## Usage
-* Run `docker-compose up`
-* In a diferent terminal run `pipenv run dev` or `python app.py` to launch
+* Run in the pipenv shell terminal `pipenv run dev` or `python app.py` to launch
 * Run docker-compose up to run server
 * Go to `localhost:5000` to view  
 * enter url you want to shorten
@@ -19,5 +18,9 @@ A free, URL shortener service, where you can enter a URL and get a shortened ver
 * click the link to redirect you to your chosen web page
 
 ### Future implementation
-* Have link returned take you directly to correct webpage
-
+- [ ] Have link returned take you directly to correct webpage 
+- [ ] Do the redirection work without middle page
+- [ ] Add url check to the input
+- [ ] Have link with the full address that takes you directly to the page
+- [ ] Make link that appears a clickable button that copy the link
+- [ ] Deploy in Heroku

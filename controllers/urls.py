@@ -17,12 +17,12 @@ def redir(short_url):
 def create(long_url):    
     actual = Url.Url.query.filter_by(origin=long_url).first()
     if actual:
-        return actual.final, 200
+        return actual.final, 302
     else:
         url=Url.Url(
                 origin=long_url
             )
         db.session.add(url)
         db.session.commit()
-        return str(url.final), 200
+        return str(url.final), 302
     
