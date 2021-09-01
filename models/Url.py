@@ -18,7 +18,7 @@ class Url(db.Model):
     def __repr__(self):
         return 'id: {}'.format(self.id)
 
-    def  short_generator(self):
+    def short_generator(self):
         characters = string.digits + string.ascii_letters
         short_url = "".join(choices(characters, k=3))
 
