@@ -2,6 +2,8 @@
 
 A free, URL shortener service, where you can enter a URL and get a shortened version, for better readability.
 
+[![live website](readme-img.JPG)](https://shortererl.herokuapp.com/)
+[]
 ## Installation
 
 * Clone or download the repo.
@@ -19,8 +21,7 @@ A free, URL shortener service, where you can enter a URL and get a shortened ver
 
 ### Future implementation
 - [ ] Have link returned take you directly to correct webpage 
-- [ ] Do the redirection work without middle page
-- [ ] Add url check to the input
-- [ ] Have link with the full address that takes you directly to the page
+- [x] Do the redirection work without middle page
+- [x] Add url check to the input
 - [ ] Make link that appears a clickable button that copy the link
-- [ ] Deploy in Heroku
+- [x] Deploy in Heroku
