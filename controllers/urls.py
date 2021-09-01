@@ -1,7 +1,7 @@
 from flask import jsonify
 from flask_sqlalchemy import SQLAlchemy
 from models import Url
-from example import db
+from app import db
 
 '''Returns a list of objects'''
 def index():

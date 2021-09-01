@@ -1,4 +1,4 @@
-from example import db
+from app import db
 from datetime import datetime
 import string 
 from random import choices
