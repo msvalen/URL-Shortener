@@ -1,4 +1,4 @@
-from example import db
+import db
 
 class Url(db.Model):
     __tablename__: 'urls'
