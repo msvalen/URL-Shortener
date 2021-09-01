@@ -6,8 +6,10 @@ services:
       - 'postgresdata:/var/lib/postgresql/data'
       - './db:/docker-entrypoint-initdb.d/:ro'
     environment:
-      - POSTGRES_PASSWORD=secretpassword2
+      - POSTGRES_PASSWORD=secretpassword
       - POSTGRES_USER=debmon
       - POSTGRES_DB=shortererl
+    ports: 
+      - 5430:5432
 volumes:
   postgresdata:
