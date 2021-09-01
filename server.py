@@ -1,7 +1,6 @@
 from flask import Flask, redirect, render_template, request, url_for
 from flask_cors import CORS 
 from flask_sqlalchemy import SQLAlchemy
-from controllers import urls as Urls
 import os
 
 #from werkzeug import exceptions
@@ -24,6 +23,8 @@ except:
 app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
 
 db = SQLAlchemy(app)
+
+from controllers import Urls
 
 @app.route('/', methods=['GET', 'POST'])
 def home():
@@ -57,5 +58,5 @@ def handle_500(err):
     return {'message': f"It's not you, it's us"}, 500
 '''
 
-# if __name__ == "__main__":
-#     app.run()
+if __name__ == '__main__':
+    app.run()
