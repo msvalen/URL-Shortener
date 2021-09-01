@@ -1,5 +1,6 @@
 from flask import Flask, render_template, request, flash, jsonify
 from flask_sqlalchemy import SQLAlchemy
+from models import Url
 
 import os
 
@@ -16,7 +17,6 @@ app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql+psycopg2://%(user)s:%(pw)s@%
 app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
 
 db = SQLAlchemy(app)
-from models import Url
 
 @app.route("/")
 def home():
@@ -24,21 +24,23 @@ def home():
   
     return jsonify([url.serialize for url in urls])
 
-@app.route("/add")
-def add_url():
-    origin='second.com'#request.args.get('url')
-    final='dsfgh'
+@app.route("/add/<url>")
+def add_url(url):
+    #origin='second.com'#request.args.get('url')
     try:
-        url=Url.Url(
-            origin=origin,
-            final=final
-        )
-        db.session.add(url)
-        db.session.commit()
-        return "Url added. url id={}".format(url.id)
+        actual = Url.Url.query.filter_by(origin=url).first()
+        if actual:
+            return jsonify(actual.final)
+        else:
+            url=Url.Url(
+                origin=url
+            )
+            db.session.add(url)
+            db.session.commit()
+            return str(url.final)
     except Exception as e:
         print(e)
-        return str(e)
+        return jsonify(e)
         
 if __name__ == '__main__':
     app.run(debug=True)
