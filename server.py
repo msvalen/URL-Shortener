@@ -9,7 +9,10 @@ app = Flask(__name__)
 CORS(app)
 
 try:
-    app.config['SQLALCHEMY_DATABASE_URI'] = os.environ['DATABASE_URL']
+    uri = os.environ['DATABASE_URL']
+    if uri.startswith("postgres://"):
+        uri = uri.replace("postgres://", "postgresql://", 1)
+    app.config['SQLALCHEMY_DATABASE_URI'] = uri
 except:
     POSTGRES = {
         'user': 'debmon',
