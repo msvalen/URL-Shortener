@@ -1,9 +1,7 @@
-from flask import Flask, redirect, render_template, request, url_for
+from flask import Flask, redirect, render_template, request
 from flask_cors import CORS 
 from flask_sqlalchemy import SQLAlchemy
 import os
-
-#from werkzeug import exceptions
 
 app = Flask(__name__)
 CORS(app)

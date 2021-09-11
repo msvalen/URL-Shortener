@@ -14,6 +14,20 @@
         <input type="text" name="original_url">
         <input type="submit">
     </form>
-    <p >{{ url }}</p>
+    <div>
+
+    {% if url %}
+        <a href="{{ url_for('new_link', short_url=url) }}">{{ url }}</a>  <input type='button' onClick='copyClipboard()' value='💾' alt='Copy'>
+        
+    {% endif%}
+    </div>
+    <script>
+        function copyClipboard() {
+            var a = document.querySelector("a");
+            var input = document.querySelector("[type='button']");
+            navigator.clipboard.writeText(a.href);
+            input.value='✔'
+        }
+    </script>
 </body>
 </html>

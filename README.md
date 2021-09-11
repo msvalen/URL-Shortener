@@ -3,7 +3,7 @@
 A free, URL shortener service, where you can enter a URL and get a shortened version, for better readability.
 
 [![live website](readme-img.JPG)](https://shortererl.herokuapp.com/)
-[]
+
 ## Installation
 
 * Clone or download the repo.
@@ -12,7 +12,7 @@ A free, URL shortener service, where you can enter a URL and get a shortened ver
 * Run `pipenv install` to install dependencies
 
 ## Usage
-* Run in the pipenv shell terminal `pipenv run dev` or `python app.py` to launch
+* Run in the pipenv shell terminal `pipenv run dev` or `python server.py` to launch
 * Run docker-compose up to run server
 * Go to `localhost:5000` to view  
 * enter url you want to shorten
@@ -20,8 +20,8 @@ A free, URL shortener service, where you can enter a URL and get a shortened ver
 * click the link to redirect you to your chosen web page
 
 ### Future implementation
-- [ ] Have link returned take you directly to correct webpage 
+- [x] Have link returned take you directly to correct webpage 
 - [x] Do the redirection work without middle page
 - [x] Add url check to the input
-- [ ] Make link that appears a clickable button that copy the link
+- [x] Make link that appears a clickable button that copy the link
 - [x] Deploy in Heroku
