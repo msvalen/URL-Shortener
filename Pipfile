@@ -16,4 +16,4 @@ gunicorn = "*"
 python_version = "3.7"
 
 [scripts]
-dev = "bash -c \"export FLASK_ENV='development' && flask run\""
+dev = "bash -c \"export FLASK_ENV='development'FLASK_APP=server && flask run\""

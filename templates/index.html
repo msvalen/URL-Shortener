@@ -15,11 +15,13 @@
         <input type="submit">
     </form>
     <div>
-
     {% if url %}
-        <a href="{{ url_for('new_link', short_url=url) }}">{{ url }}</a>  <input type='button' onClick='copyClipboard()' value='💾' alt='Copy'>
-        
-    {% endif%}
+        {% if 'that is not a url' in url %}
+            <p>{{ url }}</p>
+        {% else %}
+            <a href="{{ url_for('new_link', short_url=url) }}">{{ url }}</a>  <input type='button' onClick='copyClipboard()' value='💾' alt='Copy'>
+        {% endif %}
+    {% endif %}
     </div>
     <script>
         function copyClipboard() {
