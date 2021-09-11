@@ -3,7 +3,6 @@
 A free, URL shortener service, where you can enter a URL and get a shortened version, for better readability.
 
 [![live website](readme-img.JPG)](https://shortererl.herokuapp.com/)
-
 ## Installation
 
 * Clone or download the repo.
